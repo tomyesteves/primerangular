@@ -1,0 +1,15 @@
+<h1>Lista de contactos</h1>
+<h3 *ngIf="contacts.length == 0; else mostrar"> No hay contactos</h3>
+
+<ng-template #mostrar>
+    <div *ngFor="let contact of contacts; odd as isOdd">
+        <div class="row">
+            <button class="col-auto bg-danger" (click)="this.EliminarContacto(contact.id)">X</button>
+            <ul class="list-group col">
+                <app-contacto-view [class]='isOdd ? "bg-secondary": "bg-success"'
+                    class="list-group-item d-flex justify-content-between align-items-center" [contact]="contact">
+                </app-contacto-view>
+            </ul>
+        </div>
+    </div>
+</ng-template>

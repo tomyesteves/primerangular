@@ -1,0 +1,11 @@
+<h1> {{ title }} </h1>
+<h2> {{ contador }} </h2>
+<button class="bg-danger" (click)="this.sumar(-1)">
+    -1
+</button>
+<button (click)="this.reset()">
+    0
+</button>
+<button class="bg-success" (click)="this.sumar(+1)">
+    +1
+</button>

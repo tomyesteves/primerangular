@@ -1,0 +1,6 @@
+<div class="row">
+    <div class="col"><app-list [contacts]="this.GetContactsService().GetContacts()"
+            (onDeleteContact)="this.GetContactsService().DeleteContact($event)"></app-list>
+    </div>
+    <div class="col"><app-form (onNewContacto)="this.GetContactsService().AddContact($event)"></app-form></div>
+</div>

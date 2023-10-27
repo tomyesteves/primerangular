@@ -1,0 +1,32 @@
+<form (ngSubmit)="this.EmitirContacto()">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="this.contact.nombre" id="nombre" nombre="nombre"
+            required="true" minlength="5">
+    </div>
+    <div class="mb-3">
+        <label for="sobrenombre" class="form-label">Sobrenombre</label>
+        <input type="text" class="form-control" [(ngModel)]="this.contact.sobrenombre" id="sobrenombre"
+            nombre="sobrenombre" minlength="5" maxlength="10">
+    </div>
+    <div class="mb-3">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="number" class="form-control" [(ngModel)]="this.contact.edad" id="edad" nombre="edad"
+            required="true" min="18">
+    </div>
+    <div class="mb-3">
+        <label for="telefono" class="form-label">Telefono</label>
+        <input type="number" class="form-control" [(ngModel)]="this.contact.telefono" id="telefono" nombre="telefono"
+            required="true">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" [(ngModel)]="this.contact.email" id="email" nombre="email"
+            required="true">
+    </div>
+    <div class="mb-3">
+        <label for="foto" class="form-label">Foto</label>
+        <input type="text" class="form-control" [(ngModel)]="this.contact.foto" id="foto" nombre="foto" required="true">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

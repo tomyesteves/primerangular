@@ -1,0 +1,7 @@
+<div>
+    Id: {{this.contact.id}} <br>
+    {{this.getContactDescription() }}
+</div>
+<div [class]="this.contact.edad < 18 ? 'btn btn-danger' : 'btn btn-primary'">
+    {{ this.contact.edad }}
+</div>
